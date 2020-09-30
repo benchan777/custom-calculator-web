@@ -7,8 +7,42 @@
 </head>
 
 <body>
-    
+
     <main>
+        <form>
+            <div>
+                <select id="shape">
+                    <option disabled selected value>-- select an option --</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="square">Square</option>
+                    <option value="circle">Circle</option>
+                </select>
+            </div>
+
+            <div id="triangle">
+                <label for="triangle-base">Triangle Base: </label>
+                <input id="triangle-base" type="number">
+                <label for="triangle-height">Triangle Height: </label>
+                <input id="triangle-height" type="number">
+
+                <div>
+                    <p>Area of the triangle: </p>
+                    <p id="triangle-area-output">0</p>
+                </div>
+            </div>
+
+            <div id="square">
+                <label for="square-length">Square Length: </label>
+                <input id="square-length" type="number">
+                <label for="square-width">Square Width: </label>
+                <input id="square-width" type="number">
+            </div>
+
+            <div id="circle">
+                <label for="circle-radius">Circle Radius: </label>
+                <input id="circle-radius" type="number">
+            </div>
+        </form>
 
     </main>
 
