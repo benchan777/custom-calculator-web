@@ -1,15 +1,19 @@
 // display
-const displayTriangleArea = document.querySelector('#triangle-area-output')
 
 // inputs
 const shapeInput = document.querySelector('#shape')
-const triangleBaseInput = document.querySelector('#triangle-base')
-const triangleHeightInput = document.querySelector('#triangle-height')
 
 // event listeners
 shapeInput.addEventListener('input', testFunction)
+
+// triangle display & inputs & event listeners
+const displayTriangleArea = document.querySelector('#triangle-area-output')
+const triangleBaseInput = document.querySelector('#triangle-base')
+const triangleHeightInput = document.querySelector('#triangle-height')
+const triangleSignificantFigures = document.querySelector('#triangle-sig-fig')
 triangleBaseInput.addEventListener('input', triangleArea)
 triangleHeightInput.addEventListener('input', triangleArea)
+triangleSignificantFigures.addEventListener('input', triangleArea)
 
 function testFunction() {
     const shape_input = document.querySelector('#shape')
