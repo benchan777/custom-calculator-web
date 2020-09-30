@@ -201,7 +201,14 @@ function circleArea() {
 }
 
 function pyramidArea() {
+    const pyramidBaseLengthValue = parseFloat(pyramidBaseLengthInput.value)
+    const pyramidBaseWidthValue = parseFloat(pyramidBaseWidthInput.value)
+    const pyramidHeightValue = parseFloat(pyramidHeightInput.value)
+    const significantFigureValue = parseInt(pyramidSignificantFigures.value)
 
+    const pyramidArea = (1/3) * (pyramidBaseLengthValue * pyramidBaseWidthValue) * pyramidHeightValue
+
+    displayPyramidArea.innerHTML = pyramidArea.toFixed(significantFigureValue)
 }
 
 const area_or_volume = document.querySelector('#area-or-volume')
