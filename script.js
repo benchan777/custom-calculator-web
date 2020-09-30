@@ -65,6 +65,8 @@ sphereRadiusInput.addEventListener('input', sphereArea)
 sphereSignificantFigures.addEventListener('input', sphereArea)
 
 // functions
+
+// function to select if you'd like to calculate area or volume
 function selectAreaOrVolume() {
     const area_or_volume = document.querySelector('#area-or-volume')
     const shape_input = document.querySelector('#shape')
@@ -101,6 +103,7 @@ function selectAreaOrVolume() {
     }
 }
 
+// function to select what you'd like to calculate the volume of
 function selectVolume() {
     const shape_volume_input = document.querySelector('#shape-volume')
     const triangle_form = document.querySelector('#triangle')
@@ -145,6 +148,7 @@ function selectVolume() {
     }
 }
 
+// function to select what you'd like to calculate the area of
 function selectShape() {
     const shape_input = document.querySelector('#shape')
     const triangle_form = document.querySelector('#triangle')
@@ -189,6 +193,7 @@ function selectShape() {
     }
 }
 
+// calculates the area of a triangle
 function triangleArea() {
     const triangleBaseValue = parseFloat(triangleBaseInput.value)
     const triangleHeightValue = parseFloat(triangleHeightInput.value)
@@ -199,6 +204,7 @@ function triangleArea() {
     displayTriangleArea.innerHTML = triangleArea.toFixed(significantFigureValue)
 }
 
+// calculates the area of a square or rectangle
 function squareArea() {
     const squareLengthValue = parseFloat(squareLengthInput.value)
     const squareWidthValue = parseFloat(squareWidthInput.value)
@@ -209,6 +215,7 @@ function squareArea() {
     displaySquareArea.innerHTML = squareArea.toFixed(significantFigureValue)
 }
 
+// calculates the area of a circle
 function circleArea() {
     const circleRadiusValue = parseFloat(circleRadiusInput.value)
     const significantFigureValue = parseInt(circleSignificantFigures.value)
@@ -218,6 +225,7 @@ function circleArea() {
     displayCircleArea.innerHTML = circleArea.toFixed(significantFigureValue)
 }
 
+// calculates the volume of a pyramid
 function pyramidArea() {
     const pyramidBaseLengthValue = parseFloat(pyramidBaseLengthInput.value)
     const pyramidBaseWidthValue = parseFloat(pyramidBaseWidthInput.value)
@@ -229,6 +237,7 @@ function pyramidArea() {
     displayPyramidArea.innerHTML = pyramidArea.toFixed(significantFigureValue)
 }
 
+// calculates the volume of a cuboid
 function cuboidArea() {
     const cuboidLengthValue = parseFloat(cuboidLengthInput.value)
     const cuboidWidthValue = parseFloat(cuboidWidthInput.value)
@@ -240,6 +249,7 @@ function cuboidArea() {
     displayCuboidArea.innerHTML = cuboidArea.toFixed(significantFigureValue)
 }
 
+// calculates the volume of a sphere
 function sphereArea() {
     const sphereRadiusValue = parseFloat(sphereRadiusInput.value)
     const significantFigureValue = parseInt(sphereSignificantFigures.value)
@@ -249,6 +259,7 @@ function sphereArea() {
     displaySphereArea.innerHTML = sphereArea.toFixed(significantFigureValue)
 }
 
+// defines constants in order to hide unused input forms
 const area_or_volume = document.querySelector('#area-or-volume')
 const shape_input = document.querySelector('#shape')
 const shape_volume_input = document.querySelector('#shape-volume')
