@@ -1,5 +1,3 @@
-// display
-
 // inputs
 const areaOrVolumeInput = document.querySelector('#area-or-volume')
 const shapeInput = document.querySelector('#shape')
