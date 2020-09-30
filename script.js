@@ -264,12 +264,14 @@ function sphereArea() {
     displaySphereArea.innerHTML = sphereArea.toFixed(significantFigureValue)
 }
 
+// tells user if they've selected area or volume
 function selectedOption() {
     const calculationInput = areaOrVolumeInput.value
 
     displaySelectedOption.innerHTML = `You are calculating the ${calculationInput}`
 }
 
+// tells user which shape they've selected and shows an image
 function selectedOptionShape() {
     const calculationInput = areaOrVolumeInput.value
     const calculationShapeInput = shapeInput.value
@@ -284,6 +286,7 @@ function selectedOptionShape() {
     displaySelectedOption.innerHTML = `You are calculating the ${calculationInput} of a ${calculationShapeInput}.`
 }
 
+// tells user which 3d shape they've selected and shows an image
 function selectedOptionShapeVolume() {
     const calculationInput = areaOrVolumeInput.value
     const calculationVolumeInput = volumeInput.value
