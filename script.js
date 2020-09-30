@@ -268,7 +268,7 @@ function sphereArea() {
 function selectedOption() {
     const calculationInput = areaOrVolumeInput.value
 
-    displaySelectedOption.innerHTML = `You are calculating the ${calculationInput}`
+    displaySelectedOption.innerHTML = `You have selected ${calculationInput}.`
 }
 
 // tells user which shape they've selected and shows an image
@@ -283,7 +283,7 @@ function selectedOptionShape() {
             displayShapeImage.innerHTML = `<img src="images/2d_shapes/circle.gif" />`
         }
 
-    displaySelectedOption.innerHTML = `You are calculating the ${calculationInput} of a ${calculationShapeInput}.`
+    displaySelectedOption.innerHTML = `You are currently calculating the ${calculationInput} of a ${calculationShapeInput}.`
 }
 
 // tells user which 3d shape they've selected and shows an image
@@ -298,7 +298,7 @@ function selectedOptionShapeVolume() {
             displayShapeImage.innerHTML = `<img src="images/3d_shapes/sphere.png" />`
         }
 
-    displaySelectedOption.innerHTML =  `You are calculating the ${calculationInput} of a ${calculationVolumeInput}.`
+    displaySelectedOption.innerHTML =  `You are currently calculating the ${calculationInput} of a ${calculationVolumeInput}.`
 }
 
 // defines constants in order to hide unused input forms
