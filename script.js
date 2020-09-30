@@ -4,7 +4,7 @@
 const shapeInput = document.querySelector('#shape')
 
 // event listeners
-shapeInput.addEventListener('input', testFunction)
+shapeInput.addEventListener('input', selectShape)
 
 // triangle display & inputs & event listeners
 const displayTriangleArea = document.querySelector('#triangle-area-output')
@@ -15,7 +15,17 @@ triangleBaseInput.addEventListener('input', triangleArea)
 triangleHeightInput.addEventListener('input', triangleArea)
 triangleSignificantFigures.addEventListener('input', triangleArea)
 
-function testFunction() {
+// square display & inputs & event listeners
+const displaySquareArea = document.querySelector('#square-area-output')
+const squareLengthInput = document.querySelector('#square-length')
+const squareWidthInput = document.querySelector('#square-width')
+const squareSignificantFigures = document.querySelector('#square-sig-fig')
+squareLengthInput.addEventListener('input', squareArea)
+squareWidthInput.addEventListener('input', squareArea)
+squareSignificantFigures.addEventListener('input', squareArea)
+
+// functions
+function selectShape() {
     const shape_input = document.querySelector('#shape')
     const triangle_form = document.querySelector('#triangle')
     const square_form = document.querySelector('#square')
@@ -23,9 +33,9 @@ function testFunction() {
 
     let shapeInputValue = shape_input.value
 
-    square_form.style.display = "none"
-    triangle_form.style.display = "none"
-    circle_form.style.display = "none"
+    // square_form.style.display = "none"
+    // triangle_form.style.display = "none"
+    // circle_form.style.display = "none"
 
     if(shapeInputValue == "triangle") {
         square_form.style.display = "initial"
@@ -54,8 +64,20 @@ function testFunction() {
 function triangleArea() {
     const triangleBaseValue = parseFloat(triangleBaseInput.value)
     const triangleHeightValue = parseFloat(triangleHeightInput.value)
+    const significantFigureValue = parseInt(triangleSignificantFigures.value)
 
     const triangleArea = 0.5 * triangleBaseValue * triangleHeightValue
 
-    displayTriangleArea.innerHTML = triangleArea.toFixed(2)
+    displayTriangleArea.innerHTML = triangleArea.toFixed(significantFigureValue)
 }
+
+function squareArea() {
+    const squareLengthValue = parseFloat(squareLengthInput.value)
+    const squareWidthValue = parseFloat(squareWidthInput.value)
+    const significantFigureValue = parseInt(squareSignificantFigures.value)
+
+    const squareArea = squareLengthValue * squareWidthValue
+
+    displaySquareArea.innerHTML = squareArea.toFixed(significantFigureValue)
+}
+
