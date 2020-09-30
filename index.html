@@ -10,6 +10,24 @@
 
     <main>
         <form>
+
+            <div>
+                <select id="area-or-volume">
+                    <option disabled selected value>-- select an option --</option>
+                    <option value="area">Area</option>
+                    <option value="volume">Volume</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="shape-volume">
+                    <option disabled selected value>-- select an option --</option>
+                    <option value="pyramid">Pyramid</option>
+                    <option value="cuboid">Cuboid</option>
+                    <option value="sphere">Sphere</option>
+                </select>
+            </div>
+
             <div>
                 <select id="shape">
                     <option disabled selected value>-- select an option --</option>
@@ -80,6 +98,30 @@
                 <div>
                     <p>Area of the Circle: </p>
                     <div id="circle-area-output">0</div>
+                </div>
+            </div>
+
+            <div id="pyramid">
+                <label for="pyramid-base-length">Pyramid Base Length: </label>
+                <input id="pyramid-base-length" type="number">
+                <label for="pyramid-base-width">Pyramid Base Width: </label>
+                <input id="pyramid-base-width" type="number">
+                <label for="pyramid-height">Pyramid Height: </label>
+                <input id="pyramid-height" type="number">
+                <label for="pyramid-sig-fig">Significant Figures: </label>
+                <select id="pyramid-sig-fig">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+
+                <div>
+                    <p>Volume of the Pyramid: </p>
+                    <div id="pyramid-area-output">0</div>
                 </div>
             </div>
         </form>
