@@ -1,3 +1,7 @@
+// display
+const displaySelectedOption = document.querySelector('#selected-option')
+const displayShapeImage = document.querySelector('#display-image')
+
 // inputs
 const areaOrVolumeInput = document.querySelector('#area-or-volume')
 const shapeInput = document.querySelector('#shape')
@@ -5,8 +9,11 @@ const volumeInput = document.querySelector('#shape-volume')
 
 // event listeners
 areaOrVolumeInput.addEventListener('input', selectAreaOrVolume)
+areaOrVolumeInput.addEventListener('input', selectedOption)
 shapeInput.addEventListener('input', selectShape)
+shapeInput.addEventListener('input', selectedOptionShape)
 volumeInput.addEventListener('input', selectVolume)
+volumeInput.addEventListener('input', selectedOptionShapeVolume)
 
 // triangle display & inputs & event listeners
 const displayTriangleArea = document.querySelector('#triangle-area-output')
@@ -255,6 +262,26 @@ function sphereArea() {
     const sphereArea = (4/3) * Math.PI * Math.pow(sphereRadiusValue, 3)
 
     displaySphereArea.innerHTML = sphereArea.toFixed(significantFigureValue)
+}
+
+function selectedOption() {
+    const calculationInput = areaOrVolumeInput.value
+
+    displaySelectedOption.innerHTML = `You are calculating the ${calculationInput}`
+}
+
+function selectedOptionShape() {
+    const calculationInput = areaOrVolumeInput.value
+    const calculationShapeInput = shapeInput.value
+
+    displaySelectedOption.innerHTML = `You are calculating the ${calculationInput} of a ${calculationShapeInput}.`
+}
+
+function selectedOptionShapeVolume() {
+    const calculationInput = areaOrVolumeInput.value
+    const calculationVolumeInput = volumeInput.value
+
+    displaySelectedOption.innerHTML =  `You are calculating the ${calculationInput} of a ${calculationVolumeInput}.`
 }
 
 // defines constants in order to hide unused input forms
