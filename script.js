@@ -290,6 +290,13 @@ function selectedOptionShape() {
 function selectedOptionShapeVolume() {
     const calculationInput = areaOrVolumeInput.value
     const calculationVolumeInput = volumeInput.value
+        if(calculationVolumeInput == "pyramid") {
+            displayShapeImage.innerHTML = `<img src="images/3d_shapes/pyramid.png" />`
+        } else if(calculationVolumeInput == "cuboid") {
+            displayShapeImage.innerHTML = `<img src="images/3d_shapes/cuboid.png" />`
+        } else if(calculationVolumeInput == "sphere") {
+            displayShapeImage.innerHTML = `<img src="images/3d_shapes/sphere.png" />`
+        }
 
     displaySelectedOption.innerHTML =  `You are calculating the ${calculationInput} of a ${calculationVolumeInput}.`
 }
