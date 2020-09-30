@@ -46,6 +46,24 @@ pyramidBaseWidthInput.addEventListener('input', pyramidArea)
 pyramidHeightInput.addEventListener('input', pyramidArea)
 pyramidSignificantFigures.addEventListener('input', pyramidArea)
 
+// cuboid display & inputs & event listeners
+const displayCuboidArea = document.querySelector('#cuboid-area-output')
+const cuboidLengthInput = document.querySelector('#cuboid-length')
+const cuboidWidthInput = document.querySelector('#cuboid-width')
+const cuboidHeightInput = document.querySelector('#cuboid-height')
+const cuboidSignificantFigures = document.querySelector('#cuboid-sig-fig')
+cuboidLengthInput.addEventListener('input', cuboidArea)
+cuboidWidthInput.addEventListener('input', cuboidArea)
+cuboidHeightInput.addEventListener('input', cuboidArea)
+cuboidSignificantFigures.addEventListener('input', cuboidArea)
+
+// sphere display & inputs & event listeners
+const displaySphereArea = document.querySelector('#sphere-area-output')
+const sphereRadiusInput = document.querySelector('#sphere-radius')
+const sphereSignificantFigures = document.querySelector('#sphere-sig-fig')
+sphereRadiusInput.addEventListener('input', sphereArea)
+sphereSignificantFigures.addEventListener('input', sphereArea)
+
 // functions
 function selectAreaOrVolume() {
     const area_or_volume = document.querySelector('#area-or-volume')
@@ -209,6 +227,26 @@ function pyramidArea() {
     const pyramidArea = (1/3) * (pyramidBaseLengthValue * pyramidBaseWidthValue) * pyramidHeightValue
 
     displayPyramidArea.innerHTML = pyramidArea.toFixed(significantFigureValue)
+}
+
+function cuboidArea() {
+    const cuboidLengthValue = parseFloat(cuboidLengthInput.value)
+    const cuboidWidthValue = parseFloat(cuboidWidthInput.value)
+    const cuboidHeightValue = parseFloat(cuboidHeightInput.value)
+    const significantFigureValue = parseInt(cuboidSignificantFigures.value)
+
+    const cuboidArea = cuboidLengthValue * cuboidWidthValue * cuboidHeightValue
+
+    displayCuboidArea.innerHTML = cuboidArea.toFixed(significantFigureValue)
+}
+
+function sphereArea() {
+    const sphereRadiusValue = parseFloat(sphereRadiusInput.value)
+    const significantFigureValue = parseInt(sphereSignificantFigures.value)
+    
+    const sphereArea = (4/3) * Math.PI * Math.pow(sphereRadiusValue, 3)
+
+    displaySphereArea.innerHTML = sphereArea.toFixed(significantFigureValue)
 }
 
 const area_or_volume = document.querySelector('#area-or-volume')
