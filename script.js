@@ -273,6 +273,13 @@ function selectedOption() {
 function selectedOptionShape() {
     const calculationInput = areaOrVolumeInput.value
     const calculationShapeInput = shapeInput.value
+        if(calculationShapeInput == "triangle") {
+            displayShapeImage.innerHTML = `<img src="images/2d_shapes/triangle.gif" />`
+        } else if (calculationShapeInput == "square") {
+            displayShapeImage.innerHTML = `<img src="images/2d_shapes/rectangle.gif" />`
+        } else if (calculationShapeInput == "circle") {
+            displayShapeImage.innerHTML = `<img src="images/2d_shapes/circle.gif" />`
+        }
 
     displaySelectedOption.innerHTML = `You are calculating the ${calculationInput} of a ${calculationShapeInput}.`
 }
