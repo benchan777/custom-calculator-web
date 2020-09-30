@@ -1,10 +1,14 @@
 // display
 
 // inputs
+const areaOrVolumeInput = document.querySelector('#area-or-volume')
 const shapeInput = document.querySelector('#shape')
+const volumeInput = document.querySelector('#shape-volume')
 
 // event listeners
+areaOrVolumeInput.addEventListener('input', selectAreaOrVolume)
 shapeInput.addEventListener('input', selectShape)
+volumeInput.addEventListener('input', selectVolume)
 
 // triangle display & inputs & event listeners
 const displayTriangleArea = document.querySelector('#triangle-area-output')
@@ -24,7 +28,22 @@ squareLengthInput.addEventListener('input', squareArea)
 squareWidthInput.addEventListener('input', squareArea)
 squareSignificantFigures.addEventListener('input', squareArea)
 
+// circle display & inputs & event listeners
+const displayCircleArea = document.querySelector('#circle-area-output')
+const circleRadiusInput = document.querySelector('#circle-radius')
+const circleSignificantFigures = document.querySelector('#circle-sig-fig')
+circleRadiusInput.addEventListener('input', circleArea)
+circleSignificantFigures.addEventListener('input', circleArea)
+
 // functions
+function selectAreaOrVolume() {
+
+}
+
+function selectVolume() {
+    
+}
+
 function selectShape() {
     const shape_input = document.querySelector('#shape')
     const triangle_form = document.querySelector('#triangle')
@@ -81,3 +100,11 @@ function squareArea() {
     displaySquareArea.innerHTML = squareArea.toFixed(significantFigureValue)
 }
 
+function circleArea() {
+    const circleRadiusValue = parseFloat(circleRadiusInput.value)
+    const significantFigureValue = parseInt(circleSignificantFigures.value)
+
+    const circleArea = Math.PI * Math.pow(circleRadiusValue, 2)
+
+    displayCircleArea.innerHTML = circleArea.toFixed(significantFigureValue)
+}
