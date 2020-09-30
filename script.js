@@ -35,6 +35,17 @@ const circleSignificantFigures = document.querySelector('#circle-sig-fig')
 circleRadiusInput.addEventListener('input', circleArea)
 circleSignificantFigures.addEventListener('input', circleArea)
 
+// pyramid display & inputs & event listeners
+const displayPyramidArea = document.querySelector('#pyramid-area-output')
+const pyramidBaseLengthInput = document.querySelector('#pyramid-base-length')
+const pyramidBaseWidthInput = document.querySelector('#pyramid-base-width')
+const pyramidHeightInput = document.querySelector('#pyramid-height')
+const pyramidSignificantFigures = document.querySelector('#pyramid-sig-fig')
+pyramidBaseLengthInput.addEventListener('input', pyramidArea)
+pyramidBaseWidthInput.addEventListener('input', pyramidArea)
+pyramidHeightInput.addEventListener('input', pyramidArea)
+pyramidSignificantFigures.addEventListener('input', pyramidArea)
+
 // functions
 function selectAreaOrVolume() {
     const area_or_volume = document.querySelector('#area-or-volume')
