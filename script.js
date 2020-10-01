@@ -206,7 +206,7 @@ function triangleArea() {
 
     const triangleArea = 0.5 * triangleBaseValue * triangleHeightValue
 
-    displayTriangleArea.innerHTML = triangleArea.toFixed(significantFigureValue)
+    displayTriangleArea.innerHTML = `Area of the triangle: ${triangleArea.toFixed(significantFigureValue)}`
 }
 
 // calculates the area of a square or rectangle
@@ -217,7 +217,7 @@ function squareArea() {
 
     const squareArea = squareLengthValue * squareWidthValue
 
-    displaySquareArea.innerHTML = squareArea.toFixed(significantFigureValue)
+    displaySquareArea.innerHTML = `Area of the square: ${squareArea.toFixed(significantFigureValue)}`
 }
 
 // calculates the area of a circle
