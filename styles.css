@@ -20,6 +20,14 @@ main {
     color: rgb(219, 169, 136);
 }
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 0 0 20px 0;
+}
+
 p {
     margin: 0.5em;
 }
@@ -33,11 +41,19 @@ p {
 .selector {
     display: flex;
     flex-direction: column;
-
+    padding: 1% 0 1% 0;
+    width: min-content;
 }
 
 form {
     display: flex;
     flex-direction: column;
     padding: 0 5% 0 5%;
+    align-items: center;
 }
+
+/* #triangle-flex {
+    display:flex;
+    flex-direction: column;
+    width: min-content;
+} */
