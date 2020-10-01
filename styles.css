@@ -63,3 +63,10 @@ select {
     padding: 1% 0 1% 0;
     width: min-content;
 }
+
+/* styles calculation output */
+.output {
+    font-size: 1.3em;
+    color: rgb(217, 124, 80);
+    font-weight: bolder;
+}
