@@ -76,6 +76,15 @@ select {
     color: rgb(217, 124, 80);
 }
 
+input{
+    width: 90px;
+    height: 22px;
+    background: transparent;
+    color: rgb(219, 169, 136);
+    border-style: solid;
+    border-radius: 0.5em;
+}
+
 /* styles calculation output */
 .output {
     font-size: 1.3em;
