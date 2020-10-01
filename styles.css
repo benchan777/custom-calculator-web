@@ -1,3 +1,8 @@
+@font-face {
+    font-family: philosopher;
+    src: url(/fonts/Philosopher-BoldItalic.ttf)
+}
+
 body {
     background-color: rgb(22, 44, 58);
 }
@@ -17,6 +22,7 @@ main {
 h1 {
     color: rgb(217, 124, 80);
     font-size: 50px;
+    font-family: philosopher;
     margin: 0.3em;
 }
 
@@ -62,6 +68,12 @@ select {
     flex-direction: column;
     padding: 1% 0 1% 0;
     width: min-content;
+}
+
+#selected-option {
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: rgb(217, 124, 80);
 }
 
 /* styles calculation output */
