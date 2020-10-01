@@ -227,7 +227,7 @@ function circleArea() {
 
     const circleArea = Math.PI * Math.pow(circleRadiusValue, 2)
 
-    displayCircleArea.innerHTML = circleArea.toFixed(significantFigureValue)
+    displayCircleArea.innerHTML = `Area of the circle: ${circleArea.toFixed(significantFigureValue)}`
 }
 
 // calculates the volume of a pyramid
