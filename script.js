@@ -239,7 +239,7 @@ function pyramidArea() {
 
     const pyramidArea = (1/3) * (pyramidBaseLengthValue * pyramidBaseWidthValue) * pyramidHeightValue
 
-    displayPyramidArea.innerHTML = pyramidArea.toFixed(significantFigureValue)
+    displayPyramidArea.innerHTML = `Volume of the pyramid: ${pyramidArea.toFixed(significantFigureValue)}`
 }
 
 // calculates the volume of a cuboid
@@ -251,7 +251,7 @@ function cuboidArea() {
 
     const cuboidArea = cuboidLengthValue * cuboidWidthValue * cuboidHeightValue
 
-    displayCuboidArea.innerHTML = cuboidArea.toFixed(significantFigureValue)
+    displayCuboidArea.innerHTML = `Volume of the cuboid: ${cuboidArea.toFixed(significantFigureValue)}`
 }
 
 // calculates the volume of a sphere
@@ -261,7 +261,7 @@ function sphereArea() {
     
     const sphereArea = (4/3) * Math.PI * Math.pow(sphereRadiusValue, 3)
 
-    displaySphereArea.innerHTML = sphereArea.toFixed(significantFigureValue)
+    displaySphereArea.innerHTML = `Volume of the sphere: ${sphereArea.toFixed(significantFigureValue)}`
 }
 
 // tells user if they've selected area or volume
