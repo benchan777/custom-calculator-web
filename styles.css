@@ -2,12 +2,6 @@ body {
     background-color: rgb(22, 44, 58);
 }
 
-h1 {
-    color: rgb(217, 124, 80);
-    font-size: 50px;
-    margin: 0.3em;
-}
-
 main {
     border-width: 5px;
     border-style: solid;
@@ -20,29 +14,17 @@ main {
     color: rgb(219, 169, 136);
 }
 
-ul {
-    list-style-type: none;
+h1 {
+    color: rgb(217, 124, 80);
+    font-size: 50px;
+    margin: 0.3em;
 }
 
-li {
-    margin: 0 0 20px 0;
-}
-
-p {
-    margin: 0.5em;
-}
-
+/* center and displays header items vertically */
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.selector {
-    display: flex;
-    flex-direction: column;
-    padding: 1% 0 1% 0;
-    width: min-content;
 }
 
 form {
@@ -50,4 +32,34 @@ form {
     flex-direction: column;
     padding: 0 5% 0 5%;
     align-items: center;
+}
+
+/* removes bullet points from list */
+ul {
+    list-style-type: none;
+}
+
+/* adds spacing between each list item */
+li {
+    margin: 0 0 20px 0;
+}
+
+/* adds spacing between paragraph items */
+p {
+    margin: 0.5em;
+}
+
+/* style dropdown menus */
+select {
+    background: transparent;
+    color: rgb(219, 169, 136);
+    border-radius: 0.5em;
+}
+
+/* styles dropdown menus for selecting area/volume and different shapes */
+.selector {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 0 1% 0;
+    width: min-content;
 }
